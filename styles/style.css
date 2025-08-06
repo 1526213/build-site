@@ -308,6 +308,7 @@ body {
     letter-spacing: 0.05em;
     color: #000;
     padding: 14px 30px;
+    cursor: pointer;
 }
 .request__icon {
     margin-right: 15px;
@@ -393,6 +394,95 @@ body {
 @media screen and (max-width: 768px) {
     .porfolio__grid {
         grid-template-columns: repeat(1,1fr);
+    }
+}
+.question {
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+
+.question .section__h2 {
+    margin-bottom: 50px;
+}
+.question_items {
+}
+.question_item {
+}
+.question_h3 {
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 23px;
+}
+.question_p {
+    margin-bottom: 40px;
+    color: var(--gray);
+    max-width: 730px;
+}
+.question_h3.close {
+    margin-bottom: 31px;
+}
+.question_h3.open::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/arrow-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 14px;
+}
+.question_h3.close::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/arrow-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 14px;
+    transform: rotate(90deg);
+}
+.question_h3.close + .question_p {
+    display: none;
+}
+@media screen and (max-width: 1280px) {
+    .question {
+        padding: 150px 15px 110px;
+    }
+}
+.partners {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: var(--dark);
+}
+.partners__h2 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.partners__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.parteners__item {
+    margin-right: 40px;
+    margin-bottom: 20px;
+    max-width: 170px;
+}
+.parteners__item:nth-child(5n) {
+    margin-right: 0;
+}
+@media screen and (max-width: 1280px) {
+    .partners__flex {
+        justify-content: center;
+    }
+    .parteners__item {
+        margin-right: 10px;
+        margin-left: 10px;       
+    }
+    .parteners__item:nth-child(5n) {
+        margin-right: 40px;
     }
 }
 
