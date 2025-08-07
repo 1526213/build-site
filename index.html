@@ -4,22 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build-site</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#!"><i class="material-icons">home</i>Главная</a></li>
+        <li><a href="#!"><i class="material-icons">people</i>О нас</a></li>
+        <li><a href="#!"><i class="material-icons">grade</i>Услуги</a></li>
+        <li><a href="#!"><i class="material-icons">phone</i>Контакты</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#!" class="sidenav-close"><i class="material-icons">close</i>Закрыть</a></li>
+    </ul>
     <header class="header">
         <div class="container">
             <div class="header__title header-icon">
                 <img src="images/logo.svg" alt="logo" class="logo">
-                <button class="burger">
+                <a class="burger sidenav-trigger" data-target="slide-out">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
-                </button>   
+                </a>   
             </div>
             <h1 class="h1">
                 Реализуем крупнейшие проекты в России
@@ -29,7 +38,6 @@
             </h4>
         </div>    
     </header>
-
     <section class="about">
         <div class="info">
             <div class="container">
@@ -195,33 +203,33 @@
                 Ответы на вопросы
             </h2>
             <div class="question_items">
-                <div class="question_item">
-                    <h3 class="text-h3 question_h3 close">Работаете ли вы по 249 ФЗ?</h3>
+                <details class="question_item">
+                    <summary class="text-h3 question_h3">Работаете ли вы по 249 ФЗ?</summary>
                     <p class="text-p question_p">
                         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
 
                     </p>
-                </div>
-                <div class="question_item">
-                    <h3 class="text-h3 question_h3 open">Работаете ли вы по 249 ФЗ?</h3>
+                </details>
+                <details class="question_item">
+                    <summary class="text-h3 question_h3">Работаете ли вы по 249 ФЗ?</summary>
                     <p class="text-p question_p">
                         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
 
                     </p>
-                </div>
-                <div class="question_item">
-                    <h3 class="text-h3 question_h3 close">Работаете ли вы по 249 ФЗ?</h3>
+                </details>
+                <details class="question_item">
+                    <summary class="text-h3 question_h3">Работаете ли вы по 249 ФЗ?</summary>
                     <p class="text-p question_p">
                         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
 
                     </p>
-                </div>
-                <div class="question_item">
-                    <h3 class="text-h3 question_h3 close">Работаете ли вы по 249 ФЗ?</h3>
+                </details>
+                <details class="question_item">
+                    <summary class="text-h3 question_h3">Работаете ли вы по 249 ФЗ?</summary>
                     <p class="text-p question_p">
                         Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
                     </p>
-                </div>
+                </details>
             </div>
         </div>
     </section>
@@ -309,7 +317,11 @@
                 <div class="contacts__item">
                     <img class="contacts__icon" src="./images/phone-icon.svg" alt="Phone number">
                     <h3 class="text-h3 contacts__h3 contacts__h3-gray">Телефон:</h3>
-                    <h3 class="text-h3 contacts__h3">8 (812) 111-22-33 <br>8 (812) 111-22-33</h3>
+                    <h3 class="text-h3 contacts__h3">
+                        <a href="tel:+78121112233">8 (812) 111-22-33</a>
+                        <br>
+                        <a href="tel:+78121112233">8 (812) 111-22-33</a>
+                    </h3>
                 </div>
                 <div class="contacts__item">
                     <img class="contacts__icon" src="./images/clock-icon.svg" alt="Schedule">
@@ -319,7 +331,9 @@
                 <div class="contacts__item">
                     <img class="contacts__icon" src="./images/mail-icon.svg" alt="Email">
                     <h3 class="text-h3 contacts__h3 contacts__h3-gray">E-mail:</h3>
-                    <h3 class="text-h3 contacts__h3 contacts__h3-accent">info@vip.ru</h3>
+                    <h3 class="text-h3 contacts__h3 contacts__h3-accent">
+                        <a href="mailto:info@vip.ru">info@vip.ru</a>
+                    </h3>
                 </div>
             </div>
         </div>
@@ -332,6 +346,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
